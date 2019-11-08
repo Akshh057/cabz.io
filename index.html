@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cabbazar</title>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+  <meta name="viewport" content="width=device-width, user-scalable=no"  >
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Francois+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
+     <script src="dist/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="dist/firebaseui.css" />
+    <script src="https://cdn.firebase.com/libs/firebaseui/4.1.0/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.1.0/firebaseui.css" />
+    <style type="text/css">
+    body{
+          padding:0px;
+          margin:0px;
+          overflow-x: hidden;
+
+    }
+    
+    .div1{
+      width: 99.7%;
+      height: 320vh;
+    
+
+    }
+    .div2{
+      width: 100%;
+      height: 14vh;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background-color: black;
+      opacity: 0.97;
+  
+      
+    }
+    .div3{
+      width: 50%;
+      height: 14vh;
+    
+      
+      float: left;
+    }
+    .div3 img{
+      padding-top: 15px;
+      padding-left: 30%;
+    }
+    .div4{
+      width: 50%;
+      height: 14vh;
+      
+      
+      float: left;
+    }
+    .btn1{
+      height: 40%;
+      width: 17%;
+      border-radius: 5px;
+      background-color: #FFA000;
+            margin-left: 25%;
+            margin-top: 4%;
+            border: none;
+            float: left;
+            font-size: 14px;
+            color: white;
+            transition: 0.4s;
+            transition-width:2s;
+            font-family: 'Concert One', cursive;
+
+          }
+      .btn2{
+      height: 40%;
+      width: 14%;
+      border-radius: 5px;
+      background-color: #FFA000;
+            margin-top: 4%;
+            margin-left: 2%;
+            border: none;
+            font-size: 14px;
+            color: white;
+             transition: 0.4s;
+             transition-width:2s;
+             float: left;
+             font-family: 'Concert One', cursive;
+          }
+      .btn1:hover{
+        background-color: #757575;
+        height: 42%;
+      }
+      .btn2:hover{
+        background-color: #757575;
+        height: 42%;
+      }
+      .div4 i{
+        float: left;
+        color: #BDBDBD;
+        margin-left: 5%;
+        margin-top: 6%;
+        transition: 0.3s;
+        transition-width:2s;
+      }
+      .div4 i:hover{
+                color: white;
+      }
+      .div5{
+        height: 85.8vh;
+        width: 100%;
+        
+        background-image: url("bg3.png");
+        background-size: cover;
+
+      }
+      .div6{
+                   height: 85.8vh;
+                   width: 60%;
+                   float: left;
+
+      }
+      .div61{
+        height: 30vh;
+        width: 100%;
+        margin-top: 12%;
+      }
+      .spn1{
+        color: #FFA000;
+          padding-left: 21%;
+        font-size: 65px;
+        font-family: 'Francois One', sans-serif;
+        letter-spacing: 0.03em;
+      }
+      .spn2{
+        color: white;
+        font-family: 'Asap', sans-serif;
+        font-size: 65px;
+      }
+      .spn3{
+        color: white;
+            font-family: 'Asap', sans-serif;
+            font-size: 30px;
+
+      }
+      .spn4{
+        color: #FFA000;
+        font-size: 30px;
+        font-family: 'Francois One', sans-serif;
+        letter-spacing: 0.08em;
+      }
+      .div62{
+        height: 30vh;
+        width: 100%;
+      }
+      .spn5{
+        color: white;
+            font-family: 'Asap', sans-serif;
+            font-size: 20px;
+            padding-left: 28%;  
+
+      }
+      .spn6{
+        color: #FFA000;
+        font-size: 20px;
+        font-family: 'Francois One', sans-serif;
+        letter-spacing: 0.08em;
+      }
+      .div7{
+        height: 85.8vh;
+        width: 39.6%;
+        float: left;
+      }
+      .div71{
+        height: 70vh;
+        width: 65%;
+        margin-top: 10%;
+        margin-left: 8%;
+        background-color: black;
+        border-radius: 14px;
+        opacity: 0.8;
+
+      }
+      .div711{
+        height: 5vh;
+        width: 100%;
+        padding-top: 5%;
+        float: left;
+        font-size: 20px;
+        color: #616161;
+            font-family:'Concert One', cursive;
+            border-bottom: 4px solid #FFA000;
+            opacity: 1.5;
+            font-size: 25px;
+
+      }
+      .spn7{
+        margin-left: 24%;
+        color: white;
+      }
+            input[type=date]{
+              height: 8%;
+              width: 88%;
+              margin-left: 6%;
+                margin-top: 6%;
+                background-color: #FFA000;
+                border: none;
+                border-radius: 8px;
+                font-size: 20px;
+                opacity: 1;
+                text-align: center; 
+
+            }
+            input[type="date"]::before{
+   color: #ffffff;
+   content: attr(placeholder) ": ";
+      font-family:'Concert One', cursive;
+      color: black;
+}
+input[type="date"]:focus::before {
+   content: "" !important;
+}
+            select{
+              height: 8%;
+              width: 88%;
+              margin-left: 6%;
+                margin-top: 6%;
+                background-color: #FFA000;
+                border: none;
+                border-radius: 8px;
+                font-size: 20px;
+                opacity: 1  ;
+            }
+            ::placeholder 
+            {
+        color: black;
+            font-family: 'Concert One', cursive;
+            text-align: center;
+      }
+      input[type=number]{
+              height: 8%;
+              width: 88%;
+              margin-left: 6%;
+                margin-top: 6%;
+                background-color: #FFA000;
+                border: none;
+                border-radius: 8px;
+                font-size: 20px;
+                opacity: 1  ;
+            }
+            input[type=time]{
+              height: 8%;
+              width: 88%;
+              margin-left: 6%;
+                margin-top: 6%;
+                background-color: #FFA000;
+                border: none;
+                border-radius: 8px;
+                font-size: 20px;
+                opacity: 1  ;
+            }
+            input[type="Time"]::before{
+   color: #ffffff;
+   content: attr(placeholder) ": ";
+      font-family:'Concert One', cursive;
+      color: black;
+}
+input[type="date"]:focus::before {
+   content: "" !important;
+}
+          
+            .btn3{
+      height: 10%;
+      width: 88%;
+      border-radius: 5px;
+      background-color: #FFA000;
+            margin-left: 6%;
+            margin-top: 8%;
+            border: none;
+            float: left;
+            font-size: 14px;
+            color: white;
+            transition: 0.4s;
+            transition-width:2s;
+           font-family: 'Concert One', cursive;
+           background-image: linear-gradient(to right, #B71C1C ,#FFC400);
+           opacity: 1;
+
+          }
+       .btn3:hover{
+         background-image: linear-gradient(to right,#FFC400  , #B71C1C);
+
+       }
+       .div8{
+        height: 70vh;
+        width: 100%;
+        
+       }
+           .div81{
+            height: 12vh;
+            width: 100%;
+             font-family: 'Concert One', cursive;
+             font-size: 45px;
+             color: #424242;
+             padding-left: 28%;
+             padding-top: 3%;
+           }
+           .div82{
+            height: 10vh;
+            width: 100%;
+            font-family: 'Concert One', cursive;
+            font-size: 35px;
+            color: #424242;
+            padding-left: 38%;
+
+           }
+           .div83{
+            height: 42vh;
+            width: 100%;
+            background-image: url('bg3.jpg');
+            background-size: cover;
+
+           }
+           .div84{
+            height: 42vh;
+            width: 18%;
+          
+            margin-left: 14%;
+            float: left;  
+           }
+           .div85{
+            height: 42vh;
+            width: 18%;
+            padding-left: 2%;
+            float: left;  
+           }
+           .div84 i{
+            color: #FFA726;
+            padding-left: 43%;
+            padding-top: 5%;
+           }
+           .div85 i{
+            color:#FFA726;
+            padding-left: 43%;
+            padding-top: 5%;
+           }
+           .spn8{
+            font-size: 20px;
+            padding-left: 28%;
+            font-family: 'Concert One', cursive;
+           }
+           .spn9{
+            font-size: 15px;
+            font-family: 'Concert One', cursive;
+            text-align: center;
+            color: #424242;
+           }
+           .div9{
+            height: 50vh;
+            width: 100%;
+       
+           }
+           .div5{
+        height: 85.8vh;
+        width: 100%;
+        
+        background-image: url("bg3.png");
+        background-size: cover;
+
+      }
+           .div91{
+            height: 10vh;
+            width: 100%;
+            font-size: 35px;
+              font-family: 'Concert One', cursive;
+              text-align: center;
+              color:#212121;
+              margin-top: 4%;
+           }
+           .div92{
+            height: 28vh;
+            width: 20%;
+            margin-top: 2%;
+            margin-left: 10%;
+            float: left;
+           }
+           .div93{
+              height: 28vh;
+            width: 20%;
+           margin-top: 2%;
+            margin-left: 2%;
+            float: left;
+
+           }
+           .div92 img{
+            border-radius: 20px;
+             transition: 0.4s;
+            transition-width:2s;
+
+           }
+           .div92 img:hover{
+            height: 180px;
+            width: 265px;
+           }
+           .div93 img{
+             border-radius: 20px;
+              transition: 0.3s;
+            transition-width:5s;
+           }
+           .div93 img:hover{
+            height: 180px;
+            width: 265px;
+           }
+           .spn10{
+             margin-top: 10%;
+             padding-left: 5%;
+             font-size: 16px;
+             font-family: 'Concert One', cursive;
+           }
+           .div10{
+            height: 74vh;
+            width: 100%;
+             background-image: url('bg3.jpg');
+            
+           
+            
+              
+           }
+           .spn11{
+            font-size: 30px;
+            font-family:'Concert One', cursive;
+            text-align: center;
+            color: black;
+            padding-top: 2%;
+
+           }
+            .spn12{
+            font-size: 30px;
+            font-family:'Concert One', cursive;
+            text-align: center;
+            color: #FFA000;
+           }
+           .div101{
+            height: 40vh;
+            width: 70%;
+            margin-left: 15%;
+           }
+           .spn14{
+            color: black;
+            font-size: 20px;
+            font-family:'Concert One', cursive;
+           }
+           .div102{
+            height: 20vh;
+            width: 20%;
+            float: left;
+              margin-left: 4%;
+              margin-top: 3%;
+
+           }
+           .div102 i{
+              color: #FFA726;
+              margin-left: 34%;
+           }
+           .spn15{
+            color: black;
+              font-family:'Concert One', cursive;
+               margin-left: 30%;
+           }
+           .div11{
+            height: 15vh;
+            width: 100%;
+            background-color: black;
+            opacity: 0.97;
+            padding-top: 2%;
+
+           }
+           .div111{
+            height: 15vh;
+            width: 50%;
+            float: left;
+            margin-left: 25%;
+
+
+           }
+           .div111 img{
+            padding-left: 30%;
+            padding-top: 15px;
+            float: left;
+           }
+           .spn16{
+            color: white;
+            font-size: 15px;
+             letter-spacing: 0.1em;
+            font-family:'Concert One', cursive;
+            
+           }
+           .div112{
+            height: 15vh;
+            width: 48%;
+            float: left;
+           }
+           .spn18{
+            color: white;
+            font-size: 15px;
+            letter-spacing: 0.1em;
+            font-family:'Concert One', cursive;
+            padding-left: 20%;
+           }
+           .spn19{
+            color: white;
+             font-family:'Concert One', cursive;
+             font-size: 20px;
+           }
+           option.opt{
+            font-family:'Concert One', cursive;
+           }
+           @media(min-width: 300px) and (max-width: 500px) {
+            body,html{
+        padding:0px;
+          margin:0px;
+          overflow-x: hidden;
+
+    }
+    .div1{
+      width: 100%;
+      
+    }
+    .div2{
+
+      position: fixed;
+      top: 0;
+      background-color: black;
+      opacity: 0.92;
+    }
+            .div3{
+                  width: 12%;
+           
+                
+            }
+            .div4{
+              width: 55%;
+            }
+            .btn1{
+              height: 27%;
+              width: 20%;
+              font-size: 12px;
+              margin-left: 30%;
+              margin-top: 10%;
+            }
+            .btn2{
+              height: 27%;
+              width: 20%;
+              font-size: 10px;
+              margin-top: 8%;
+              margin-top: 12%;
+            }
+            .div3 img{
+              height: 35px;
+              width: 80px;
+              margin-top: 35%;
+            }
+            .div4 i{
+              display: none;
+            }
+            .btn1:hover{
+              height: 30%;
+            }
+            .btn2:hover{
+              height: 30%;
+            }
+            .div6{
+              display: none;
+            }
+            .div7{
+              width: 52%;
+            }
+            .div71{
+              margin-left: 7%;
+              height: 57vh;
+              width: 75%;
+              margin-top: 35%;
+            }
+            .div8{
+              height: 100vh;
+              width: 100%;
+            }
+            .div81{
+              
+              height: 12vh;
+            width: 100%;
+             font-family: 'Concert One', cursive;
+             font-size: 30px;
+             color: #424242;
+             padding-left: 15%;
+             padding-top: 3%;
+            }
+            .div82{
+            height: 10vh;
+            width: 100%;
+            font-family: 'Concert One', cursive;
+            font-size: 25px;
+            color: #424242;
+            padding-left: 18%;
+
+           }  
+           .div83{
+          
+            height: 100vh;
+           }
+           .div84{
+            width: 90%;
+            height: 35vh;
+  
+            margin-left: 1%;
+           }
+           .div84 i{
+            color: #FFA726;
+            padding-left: 40%;
+            padding-top: 5%;
+       }
+       .div85{
+        margin-top: 10%;
+       }
+       .spn8{
+            font-size: 30px;
+            padding-left: 23%;
+            font-family: 'Concert One', cursive;
+           }
+           .spn9{
+            font-size: 20px;
+            font-family: 'Concert One', cursive;
+            color: #424242;
+          
+            
+           }
+           .div5{
+            width: 823px;
+           }
+           .div2{
+            width: 823px;
+
+           }
+           .div3 img{
+            padding-left: 30%;
+            padding-top: 5px;
+           }
+           .div85{
+            width: 90%;
+            height: 35vh;
+           }
+           .div9{
+           
+            display: none;
+           }
+           .div91{
+            display: none;
+           }
+           .div10{
+
+            height: 270vh;
+
+           }
+           .div101 p{
+            font-size: 20px;
+           }
+           .div102{
+            width: 100%;
+           }
+           .spn16{
+            font-size: 15px;
+           }
+           .spn11{
+            padding-top: 20%;
+           }
+
+       }
+
+       @media(min-width: 375px) and (max-width:400px){
+        .div11{
+            margin-top: 40%;
+           }
+       }
+
+              </style>
+</head>
+<body>
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC_pr8ukuOvnIINmeLctWKytzoc-AK1b8o",
+    authDomain: "cabbazar-90cef.firebaseapp.com",
+    databaseURL: "https://cabbazar-90cef.firebaseio.com",
+    projectId: "cabbazar-90cef",
+    storageBucket: "",
+    messagingSenderId: "45011371477",
+    appId: "1:45011371477:web:ffe83da866bcb216"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<div class="div1">
+<div class="div2">
+  <div class="div3">
+    <img src="cabbazar.png" height="60px" width="120px">
+  </div>
+  <div class="div4">
+    <a href="signup.html"> <button class="btn1"> SIGN IN</button> </a>
+       <a href="#"> <i class="fab fa-twitter"></i> </a>
+       <a href="#"> <i class="fab fa-facebook"></i> </a>
+        <a href="#">  <i class="fab fa-instagram"></i></a>
+    
+  </div>
+</div>
+<div class="div5">
+  <div class="div6">  
+    <div class="div61"> <span class="spn1"> <b> Taxi Booking </b> </span>  <span class="spn2"> made easy. </span>
+      <br> <br> <span style="padding-left: 28%"> <span class="spn3"> Avail</span> <span class="spn4"> Best Price</span> <span class="spn3"> &service with</span> <span class="spn4">CabBazar</span>
+      <br> <br>
+    <div class="div62">
+      <span class="spn4" style="padding-left: 43%">7777-880-880</span>
+      <br> 
+      <span style="padding-left: 31%;"> <img src="ps.png" height="100px" width="200px"> <img src="as.png" height="100px" width="200px"> </span> <br>
+      <span class="spn5">*Get <span class="spn6"> Rs.200</span> Cashback on downloading mobile app.</span>
+
+    </div>
+
+    </div>
+    </div>
+  <div class="div7">
+    <div class="div71"> 
+      
+          <div class="div711"> <span class="spn7"> One Way Trip </span> </div> </b>
+             <select required id="item1">
+              <option value="" disabled selected hidden >ENTER PICKUPCITY</option>
+              <option value="Jaipur">Jaipur</option>
+              <option value="MountAbu">Mount Abu</option>
+             </select>
+             <select required id="item2">
+              <option value="" disabled selected hidden>ENTER DESTINATION CITY</option>
+              <option value="Ahemdabad">Ahemdabad</option>
+              <option value="Jodhpur">Jodhpur</option>
+             </select>
+             <input type="date" name="date" min="2019-07-03" id="date" placeholder="Enter Date" >
+             <input type="number" name="phone number" max="10" placeholder="Enter Mobile Number" id="number">
+             <input type="time" name="time" placeholder="Enter Time" id="time">
+             <button class="btn3" onclick="Getprices();"> Get Prices</button>
+            
+    </div>
+  </div>
+</div>
+<div class="div8"> 
+ <div class="div81">
+  Best Outstation Taxi   Service in India
+ </div>
+ <br> <br>
+<div class="div82">Let's talk <span style="color:#FFA000 "> Cab </span> Bazar</div>
+<div class="div83">
+  <div class="div84"> <i class="fas fa-sync fa-3x "></i> <br> <br> 
+    <span class="spn8">No return fare</span> <br> <br> 
+    <span class="spn9"> Why pay double for One way cab! Taxi providers are ready for <br> one way fare as they are getting  another customer for return.  </span>
+  </div>
+  <div class="div85"> <i class="fas fa-rupee-sign fa-3x"></i> <br> <br>
+    <span class="spn8"> No over-pricing</span> <br> <br>
+    <span class="spn9">Get cheapest price for your journey. A big pool of outstation taxi <br> providers are waiting to serve you best in least price</span>
+  </div>
+  <div class="div85"> <i class="fas fa-truck-moving fa-3x"></i> <br> <br>
+     <span class="spn8">Cabs availability</span> <br> <br>
+     <span class="spn9">Holiday season! Your favourite taxi provider is refusing to provide <br> a cab. No worries, CabBazar brings thousands of taxi providers in your <br> reach.</span>
+  </div>
+  <div class="div85"> <i class="fas fa-landmark fa-3x"></i> <br> <br>
+     <span class="spn8"> Cabs availability</span> <br> <br>
+     <span class="spn9">No more off-season, no more idle cabs. Get all your cabs earning for <br> you throughout the year </span>
+  </div>
+</div>
+</div>
+<div class="div9"> 
+   <div class="div91"> POPULAR DESTINATIONS</div>
+   <div class="div92">   <a href="ooty.html"><img src="ooty.png" height="170px" width="255px"> </a>
+  <p class="spn10">Taxi from Bangalore to Ooty</p>
+   </div> 
+   <div class="div93">  <a href="shirdi.html">  <img src="shirdi.png" height="170px" width="255px"> </a>
+    <p class="spn10">Taxi from Mumbai to Shirdi</p>
+   </div>
+   <div class="div93"> <a href="manali.html"> <img src="delhi-manali.jpg" height="170px" width="255px"> </a>
+    <p class="spn10">Taxi from Delhi to Manali</p>
+   </div>
+   <div class="div93"> <a href="haridwar.html">  <img src="haridwar.png" height="170px" width="255px"> </a>
+    <p class="spn10">Taxi from Delhi to Haridwar</p>
+   </div>
+
+</div>
+<div class="div10">
+
+  <p class="spn11"> WHY <span class="spn12"> CAB </span> BAZAR?</p>
+  <div class="div101">
+    <p class="spn14">Cab Bazar is leading outstation taxi provider in India. We strive to make the taxi booking an easy and comfortable experience through our online cab booking service. Wherever you travel in India, we have got a cab for you. You can choose from a small hatchback car or comfortable sedan (Dzire, Etios) car or an suv (Innova, Xylo), Instead you will get the details within few minutes of booking your outstation cab. So, enjoy your vacations to fullest. Instead of driving, hire outstation cabs from Cab Bazar and sit back & relax, take fresh air, experience various local culture during the trip, have stop-overs as per convenience. After all, it's your own cab!</p>
+    <div class="div102">
+      <i class="fas fa-car fa-4x"></i>
+      <p class="spn15">CLEAN CAR</p>
+    </div>
+    <div class="div102">
+      <i class="fas fa-print fa-4x"></i>
+      <p class="spn15">TRANSPARENT BILLING</p>
+    </div>
+    <div class="div102">
+      <i class="far fa-handshake fa-4x"></i>
+      <p class="spn15">RELIABLE SERVICE</p>
+    </div>
+    <div class="div102">
+      <i class="fas fa-user-tie fa-4x"></i>
+      <p class="spn15">COURTEOUS DRIVER</p>
+    </div>
+  </div>
+</div>
+<div class="div11">
+  <div class="div111">
+    <span class="19"> Cab<span class="20">Bazar</span></span>
+<span class="spn16">  CabBazar LLC.</span>
+ </div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+  document.querySelector("#date").valueAsDate = new Date();
+    function Getprices(){
+      var a = document.getElementById('item1').value;
+      var b = document.getElementById('item2').value;
+      var c = document.getElementById('number').value;
+      var d = document.getElementById('time').value;
+      var e = document.getElementById('date').value;
+      console.log(a);
+      if (a=="") {
+        alert("Please select PickupCity");
+      }
+      else if (b=="") {
+        alert("Please select DestinationCity");
+      }
+        else if (c=="") {
+          alert("Please Enter Phone Number");
+        }
+        else if (d=="") {
+          alert("Please Enter Time of Your Journey");
+        }
+        if(a=="Jaipur"&& b=="Ahemdabad")
+        {
+          alert("Your Cab is booked for the date " + e + " from " +a+ " to " +b+ " at " +d+" Thank you your fare is Rs.6000" );
+
+          firebase.database().ref('users/').push({
+  "pickUpCity":a,
+  "DestinationCity":b,
+  "PhoneNumber":c,
+  "Time":d,
+  "Date":e
+  });
+    
+        }
+        else if (a=="MountAbu" && b=="Jodhpur") {
+          alert("Your Cab is booked for the date " + e + " from " +a+ " to " +b+ " at " +d+" Thank you  your fare is Rs.2000" );
+
+firebase.database().ref('users/').push({
+  "pickUpCity":a,
+  "DestinationCity":b,
+  "PhoneNumber":c,
+  "Time":d,
+  "Date":e
+  });
+    
+
+        }
+        else if (a=="Jaipur" && b=="Jodhpur") {
+          alert("Your Cab is booked for the date " + e + " from " +a+ " to " +b+ " at " +d+" Thank you your fare is Rs.3000");
+
+           firebase.database().ref('users/').push({
+  "pickUpCity":a,
+  "DestinationCity":b,
+  "PhoneNumber":c,
+  "Time":d,
+  "Date":e
+  });
+    
+        }
+        
+        else if (a=="MountAbu" && b=="Ahemdabad") {
+          alert("Your Cab is booked for the date " + e + " from " +a+ " to " +b+ " at " +d+" Thank you  your fare is Rs.2500" );
+
+
+                firebase.database().ref('users/').push({
+  "pickUpCity":a,
+  "DestinationCity":b,
+  "PhoneNumber":c,
+  "Time":d,
+  "Date":e
+  });
+    
+        }
+
+
+        
+
+      
+    }
+    
+</script>
+    </html>
