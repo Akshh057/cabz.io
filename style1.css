@@ -1,0 +1,19 @@
+html,body{
+			padding: 0px;
+			margin:0px;
+          height: 100vh;
+			 background: url('bg12.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	
+  color: white;
+   font-family: 'Concert One', cursive;
+	justify-content: center;
+	overflow: hidden;
+   font-size: 28px;
+
+
+		
+		}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>FirebaseUI Auth Demo</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase.js"></script>
+    <script src="config.js"></script>
+    <script src="common.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="dist/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="dist/firebaseui.css" />
+       <script src="dist/firebaseui.js"></script>
+       <script src="https://cdn.firebase.com/libs/firebaseui/4.1.0/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.1.0/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="dist/firebaseui.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+   <!-- <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyC_pr8ukuOvnIINmeLctWKytzoc-AK1b8o",
+    authDomain: "cabbazar-90cef.firebaseapp.com",
+    databaseURL: "https://cabbazar-90cef.firebaseio.com",
+    projectId: "cabbazar-90cef",
+    storageBucket: "",
+    messagingSenderId: "45011371477",
+    appId: "1:45011371477:web:ffe83da866bcb216"
+    
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    </script>
+    <script type="text/javascript">
+          var uiConfig = {
+          signInSuccessUrl: 'index.html',
+          signInOptions: [
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          ],
+          tosUrl: 'https://www.namastegaon.in/p/privacy-policy.html',
+          privacyPolicyUrl: function() {
+          window.location.assign('https://www.namastegaon.in/p/privacy-policy.html');
+          }
+          };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+
+
+      var handleSignedOutUser = function() {
+        console.log("sign in");
+      };
+
+
+      var handleSignedInUser = function(user) {
+        console.log("signed out")
+      };
+    </script>-->
+  <body>
+    <div id="container">
+      <h3>ACCOUNT LOGIN</h3>
+      <div id="loading">Loading...</div>
+      <div id="loaded" class="hidden">
+        <div id="main">
+          <div id="user-signed-in" class="hidden">
+            <div id="user-info">
+              <div id="photo-container">
+                <img id="photo">
+              </div>
+              <div id="name"></div>
+              <div id="email"></div>
+              <div id="phone"></div>
+              <div id="is-new-user"></div>
+              <div class="clearfix"></div>
+            </div>
+            <p>
+              <button id="sign-out">Sign Out</button>
+              <button id="delete-account">Delete account</button>
+            </p>
+          </div>
+          <div id="user-signed-out" class="hidden">
+            <fieldset style="display: none;">
+              <legend>Configuration</legend>
+              reCAPTCHA mode for Phone Auth:
+              <label for="recaptcha-normal">
+                <input type="radio" id="recaptcha-normal" name="recaptcha" value="normal">
+                Normal
+              </label>
+              <label for="recaptcha-invisible">
+                <input type="radio" id="recaptcha-invisible" name="recaptcha" value="invisible">
+                Invisible
+              </label><br>
+              Email signInMethod:
+              <label for="email-signInMethod-password">
+                <input type="radio" id="email-signInMethod-password" name="emailSignInMethod"
+                       value="password">
+                Password
+              </label>
+              <label for="email-signInMethod-emailLink">
+                <input type="radio" id="email-signInMethod-emailLink" name="emailSignInMethod"
+                       value="emailLink">
+                Email Link
+              </label>
+            </fieldset>
+            <p>
+              <button id="sign-in-with-redirect" style="display: none;">Sign In with Redirect</button>
+              <button id="sign-in-with-popup" style="display: none;">Sign In with Popup</button>
+            </p>
+            <div id="firebaseui-spa">
+              <div id="firebaseui-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+
+    <div id="firebaseui-auth-container"></div>
+  </body>
+</html>
